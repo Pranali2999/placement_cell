@@ -19,7 +19,7 @@ const development = {
     mode: 'dev',
     options: { stream: accessLogStream }
   },
-  MONGO_URL: 'mongodb://localhost:27017/mp_development'
+  MONGO_URL: 'mongodb+srv://Pranali:ucsAdLmhDjhdgu22@cluster0.lqn3xio.mongodb.net/?retryWrites=true&w=majority'
 };
 
 const production = {
