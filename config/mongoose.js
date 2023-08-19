@@ -1,9 +1,15 @@
 const mongoose = require('mongoose');
-async function main(){
-    //await mongoose.connect('mongodb+srv://Pranali:ucsAdLmhDjhdgu22@cluster0.lqn3xio.mongodb.net/');
-    await mongoose.connect('mongodb+srv://Pranali:ucsAdLmhDjhdgu22@cluster0.lqn3xio.mongodb.net/?retryWrites=true&w=majority');
-    console.log("connection Successfull !! ");
+const config = require('./environment'); // Update the path
+
+async function main() {
+    await mongoose.connect(config.MONGO_URL, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+    });
+    console.log("Connection Successful!!");
 }
-main().catch(error =>console.log("connection not successfull !!"));
+
+main().catch(error => console.error("Connection not successful:", error));
 
 module.exports = mongoose;
+
