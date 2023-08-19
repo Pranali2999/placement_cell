@@ -47,11 +47,11 @@ app.use(session({
     resave: false,
     cookie: {
         maxAge: 1000 * 60 * 60 * 24
-    },
-    store: new MongoStore({
-        mongoUrl: 'mongodb://localhost/mp_development',
-        autoRemove: 'disabled'
-    }),
+    }
+    // store: new MongoStore({
+    //     mongoUrl: 'mongodb://localhost/mp_development',
+    //     autoRemove: 'disabled'
+    // }),
 }));
 
 app.use(logger(env.morgan.mode, env.morgan.options));
