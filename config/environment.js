@@ -18,7 +18,8 @@ const development = {
     morgan:{
       mode: 'dev',
       options: {stream: accessLogStream}
-    }
+    },
+    MONGO_URL: 'mongodb://localhost:27017/mp_development' 
   }
 
 const production = {
@@ -29,7 +30,8 @@ const production = {
     morgan:{
       mode: 'combined',
       options: {stream: accessLogStream}
-    }
+    },
+    MONGO_URL: process.env.MONGO_URL
 }
 
 module.exports = eval(process.env.CODIAL_ENVIRONMENT) === undefined ? development : eval(process.env.CODIAL_ENVIRONMENT);
