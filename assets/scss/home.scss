@@ -1,0 +1,77 @@
+/* Global styles */
+$primary-color: #007bff;
+$danger-color: #dc3545;
+$text-color: #333;
+
+/* Main container */
+.container {
+  margin: auto;
+  margin-top: 5rem;
+  padding: 1rem;
+  background-color: #f0cfcd;
+  border-radius: 5px;
+  box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.05);
+
+  .row {
+    margin-bottom: 1.5rem;
+    h2 {
+      color: $text-color;
+      font-size: 24px;
+    }
+  }
+
+  /* Table styling */
+  .table {
+    th, td {
+      vertical-align: middle;
+      font-weight: normal;
+      color: $text-color;
+    }
+    th {
+      background-color: $primary-color;
+      color: #fff;
+    }
+    a {
+      text-decoration: none;
+      color: $primary-color;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  /* "No Records Found" message */
+  .no-records {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    color: $text-color;
+  }
+
+  /* Delete button styling */
+  .btn-delete {
+    background-color: $danger-color;
+    border: none;
+    &:hover {
+      background-color: darken($danger-color, 10%);
+    }
+  }
+
+  /* Add Student button styling */
+  .btn-add-student {
+    background-color: rgb(80, 162, 84);
+    border: none;
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+  
+  /* Adjust the height of the table container */
+  .table-container {
+    max-height: 600px; /* Set a maximum height for the table container */
+    overflow-y: auto; /* Add vertical scrollbar if content overflows */
+  }
+}

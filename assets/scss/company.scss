@@ -1,0 +1,67 @@
+/* Global styles */
+$primary-color: #007bff;
+$warning-color: #ffc107;
+$text-color: #333;
+
+/* Main container */
+.container {
+  margin: auto;
+  margin-top: 5rem;
+  padding: 1rem;
+  background-color: #e6e9e9;
+  border-radius: 5px;
+  box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.05);
+
+  .row {
+    margin-bottom: 1.5rem;
+    h1 {
+      color: $text-color;
+      font-size: 28px;
+    }
+  }
+
+  /* Table styling */
+  .table {
+    overflow-x: auto; /* Allow horizontal scrolling */
+    th, td {
+      vertical-align: middle;
+      font-weight: normal;
+      color: $text-color;
+    }
+    th {
+      background-color: $primary-color;
+      color: #fff;
+      padding: 0.75rem;
+      text-align: center;
+    }
+    td {
+      padding: 0.5rem;
+      text-align: center;
+      a {
+        text-decoration: none;
+        color: $primary-color;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .btn-warning {
+      background-color: $warning-color;
+      border: none;
+      &:hover {
+        background-color: darken($warning-color, 10%);
+      }
+    }
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    .row {
+      display: block;
+      text-align: center;
+    }
+    .col-6 {
+      width: 100%;
+    }
+  }
+}

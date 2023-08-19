@@ -1,0 +1,64 @@
+
+#wrapper {
+  display: grid;
+  place-content: center;
+  width: 50%;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.05);
+  margin: auto;
+  margin-top: 5rem;
+  padding: 2rem;
+}
+
+form {
+  width: 100%;
+
+  .form-outline {
+    margin-bottom: 20px;
+
+    label {
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.8rem; /* Increase padding for larger input fields */
+  margin-bottom: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+}
+
+.btn-success {
+  background-color: #114a95;
+  border: none;
+}
+
+// Styling for the log in link
+.log-in-link {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+// Apply styles to the form wrapper
+body {
+  background-color: #bdccf1;
+}
+
+// Include Bootstrap CSS classes if needed
+// For example, if you are using Bootstrap classes for responsiveness
+// .container {
+//   @include container;
+// }
