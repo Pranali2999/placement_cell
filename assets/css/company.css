@@ -1,0 +1,47 @@
+/* Global styles */
+/* Main container */
+.container {
+  margin: auto;
+  margin-top: 5rem;
+  padding: 1rem;
+  background-color: #e6e9e9;
+  border-radius: 5px;
+  box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.05);
+  /* Table styling */
+  /* Media queries for responsiveness */ }
+  .container .row {
+    margin-bottom: 1.5rem; }
+    .container .row h1 {
+      color: #333;
+      font-size: 28px; }
+  .container .table {
+    overflow-x: auto;
+    /* Allow horizontal scrolling */ }
+    .container .table th, .container .table td {
+      vertical-align: middle;
+      font-weight: normal;
+      color: #333; }
+    .container .table th {
+      background-color: #007bff;
+      color: #fff;
+      padding: 0.75rem;
+      text-align: center; }
+    .container .table td {
+      padding: 0.5rem;
+      text-align: center; }
+      .container .table td a {
+        text-decoration: none;
+        color: #007bff; }
+        .container .table td a:hover {
+          text-decoration: underline; }
+    .container .table .btn-warning {
+      background-color: #ffc107;
+      border: none; }
+      .container .table .btn-warning:hover {
+        background-color: #d39e00; }
+  @media (max-width: 768px) {
+    .container .row {
+      display: block;
+      text-align: center; }
+    .container .col-6 {
+      width: 100%; } }

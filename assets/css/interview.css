@@ -1,0 +1,47 @@
+/* Global styles */
+/* Main container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #e6e9e9;
+}
+
+/* Form styling */
+.form-container {
+  display: grid;
+  place-content: center;
+  width: 530px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+}
+
+.form-container .form-heading {
+  margin-bottom: 50px;
+  color: #333;
+  font-size: 24px;
+}
+
+.form-container .form-label {
+  font-weight: bold;
+}
+
+.form-container .form-control, .form-container .form-select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+}
+
+.form-container .btn-success {
+  background-color: #28a745;
+  border: none;
+}
+
+.form-container .btn-success:hover {
+  background-color: #1e7e34;
+}

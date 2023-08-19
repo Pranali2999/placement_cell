@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Styles-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  
+  <%- include('_bootstrap_meta')%>
+  <%- style %>
+  <title>Placement Cell | Home</title>
+</head>
+<body>
+    
+  <%- include('_header'); %>
+
+  <div class="main-content">
+    <!-- Your main content goes here -->
+    <%- body %>
+  </div>
+  <%- include('_footer'); %>
+  <%- script %>
+  <script>
+    // This script is for displaying Noty notifications if needed
+    // You can customize it according to your requirements
+    <% if (typeof flash !== 'undefined' && flash.success && flash.success.length > 0) { %>
+      new Noty({
+        theme: 'relax',
+        text: "<%= flash.success %>",
+        type: 'success',
+        layout: 'topRight',
+        timeout: 1500
+      }).show();
+    <% } %>
+    <% if (typeof flash !== 'undefined' && flash.error && flash.error.length > 0) { %>
+      new Noty({
+        theme: 'relax',
+        text: "<%= flash.error %>",
+        type: 'error',
+        layout: 'topRight',
+        timeout: 1000
+      }).show();
+    <% } %>
+  </script>
+  
+  <%- include('_bootstrap_script') %>
+</body>
+</html>

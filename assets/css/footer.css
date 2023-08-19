@@ -1,0 +1,22 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* Ensure the body takes at least the full viewport height */
+  margin: 0; }
+
+.main-content {
+  flex: 1;
+  /* Allow the main content to grow and fill remaining space */ }
+
+footer {
+  height: 10vh;
+  background-color: #1b1b1b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  color: white;
+  padding: 0 10%; }
+
+/* ... your other styles ... */

@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="/css/update-profile.css" type="text/css">
+
+<form action="/users/profile/update/<%= user._id %>" method="POST">
+    <div>
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" value="<%= locals.user.name %>" required>
+    </div>
+    <div>
+      <label for="password">New Password</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <div>
+      <label for="confirm_password">Confirm Password</label>
+      <input type="password" id="confirm_password" name="confirm_password" required>
+    </div>
+    <button type="submit">Update Profile</button>
+  </form>
+  
