@@ -37,7 +37,16 @@
 	    <td ><%=student.batch%></td>
             <td><%=student.email%></td>
             <td><%=student.contactNumber%></td>
-	    <td><%=student.placement%></td>
+	    <td>
+              <form class="update-form" data-student-id="<%= student.id %>">
+                <input type="hidden" name="placement" value="<%= student.placement %>" />
+                <select class="form-select" name="companyResult">
+                  <option value="Placed" <% if(student.placement === 'Placed') { %> selected <% } %>>Selected</option>
+                  <option value="Not Placed" <% if(student.placement === 'Not Placed') { %> selected <% } %>>Not Selected</option>
+                </select>
+                <button type="submit" class="btn btn-warning btn-sm">Update</button>
+              </form>
+            </td> 
             <td><%=student.dsa%></td>
             <td><%=student.webd%></td>
             <td><%=student.react%></td>
