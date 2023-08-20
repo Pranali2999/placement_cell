@@ -13,4 +13,6 @@ router.delete('/delete/:id', passport.checkAuthentication, studentController.del
 // ------------------- Posts Requests ----------
 router.post('/create-student', passport.checkAuthentication, studentController.createStudent);
 
+router.post('/updatePlacement/:id', studentController.updateStudentPlacement);
+
 module.exports = router;
