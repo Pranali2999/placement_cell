@@ -22,6 +22,7 @@
             <th scope="col">Batch</th>
             <th scope="col">Email</th>
             <th scope="col">Contact</th>
+	    <th scope="col">Status</th>
             <th scope="col">DSA</th>
             <th scope="col">WEB</th>
             <th scope="col">REACT</th>
@@ -33,9 +34,10 @@
           <% for(let student of students) {%>
           <tr>
             <td scope="row"><%=student.name%></td>
-			<td ><%=student.batch%></td>
+	    <td ><%=student.batch%></td>
             <td><%=student.email%></td>
             <td><%=student.contactNumber%></td>
+	    <td><%=student.placement%></td>
             <td><%=student.dsa%></td>
             <td><%=student.webd%></td>
             <td><%=student.react%></td>
